@@ -1,0 +1,83 @@
+# Folio, everything in containers: the reader (web), the AI backend and PostgreSQL.
+#
+#   cp .env.example .env      # set POSTGRES_PASSWORD and an answer key
+#   docker compose up -d --build
+#   open http://localhost:8080
+#
+# Memory: the backend needs about 2.5–3 GB while it reads a PDF (Docling's layout models), 1 GB otherwise;
+# give Docker at least 4 GB (Docker Desktop → Settings → Resources). The reader itself works without the
+# backend, so `docker compose up -d web` alone runs it with the assistant shown as offline.
+#
+# For local development without containers, backend/docker-compose.yml runs only PostgreSQL (`npm run ai:db`).
+name: folio
+
+services:
+  web:
+    build: .
+    image: folio-web
+    restart: unless-stopped
+    environment:
+      FOLIO_AI_URL: http://backend:8765
+    ports:
+      # Loopback only. To open it to your network, use "${FOLIO_PORT:-8080}:4173" — note that browsers
+      # only allow some features (clipboard, crypto hashing) on localhost or HTTPS.
+      - "127.0.0.1:${FOLIO_PORT:-8080}:4173"
+    depends_on:
+      - backend
+
+  backend:
+    build: ./backend
+    image: folio-backend
+    restart: unless-stopped
+    # Answer keys, LLM_PROVIDER and tuning (PARSE_THREADS, QUICK_INDEX, …) come from .env; see .env.example.
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      # Fixed for the container layout; these win over anything in .env.
+      HOST: 0.0.0.0
+      PORT: "8765"
+      DATA_DIR: /data
+      MODELS_PATH: /models
+      DATABASE_URL: ""
+      QDRANT_URL: ""
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: "5432"
+      POSTGRES_USER: ${POSTGRES_USER:-folio}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env (copy .env.example)}
+      POSTGRES_DB: ${POSTGRES_DB:-folio_ai}
+    volumes:
+      - folio_data:/data # uploaded PDFs, Docling parses, the vector index
+      - folio_models:/models # Docling, embedding and reranker models (~1 GB, downloaded on first use)
+    depends_on:
+      postgres:
+        condition: service_healthy
+    # Not published: the browser reaches it through the web container's /api/ai proxy.
+    expose:
+      - "8765"
+
+  postgres:
+    image: postgres:17-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-folio}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env (copy .env.example)}
+      POSTGRES_DB: ${POSTGRES_DB:-folio_ai}
+    volumes:
+      - folio_pg:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 3s
+      timeout: 3s
+      retries: 20
+    # A single reader's metadata and chats are small.
+    command: ["postgres", "-c", "shared_buffers=128MB", "-c", "max_connections=40"]
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+
+volumes:
+  folio_data:
+  folio_models:
+  folio_pg:

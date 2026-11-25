@@ -1,0 +1,16 @@
+# The web image needs the frontend sources only; the backend has its own image (backend/Dockerfile).
+.git
+node_modules
+dist
+public/pdfjs
+backend
+docs
+tests
+test-results
+playwright-report
+.shots
+.scratch
+*.log
+.env
+.env.*
+tsconfig.tsbuildinfo

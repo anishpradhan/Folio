@@ -1,0 +1,12 @@
+node_modules
+dist
+public/pdfjs
+test-results
+playwright-report
+.shots
+.scratch
+*.log
+.env
+.env.local
+*.tsbuildinfo
+specs*

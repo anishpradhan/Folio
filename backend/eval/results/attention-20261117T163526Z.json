@@ -1,0 +1,1531 @@
+{
+  "set": "attention",
+  "k": 8,
+  "embedding": {
+    "provider": "local",
+    "model": "BAAI/bge-small-en-v1.5"
+  },
+  "reranker": "Xenova/ms-marco-MiniLM-L-6-v2",
+  "relevant_passages": {
+    "encoder-layers": 1,
+    "why-scale": 1,
+    "num-heads": 1,
+    "ffn-size": 2,
+    "decoder-mask": 2,
+    "posenc-kind": 1,
+    "posenc-why": 1,
+    "optimizer": 1,
+    "warmup": 1,
+    "hardware": 2,
+    "base-train-time": 1,
+    "big-train-steps": 1,
+    "ende-data": 1,
+    "enfr-vocab": 1,
+    "batch-tokens": 1,
+    "label-smoothing": 1,
+    "dropout": 1,
+    "bleu-ende": 2,
+    "bleu-enfr": 2,
+    "beam": 1,
+    "checkpoints": 1,
+    "single-head": 1,
+    "key-size": 1,
+    "parsing-vs-berkeley": 1,
+    "parsing-model": 1,
+    "complexity": 2,
+    "path-length": 2,
+    "rnn-parallel": 1,
+    "three-uses": 1,
+    "tied-embeddings": 1,
+    "head-behaviour": 2,
+    "future-work": 1,
+    "conv-cost": 1,
+    "who-scaled": 1
+  },
+  "results": {
+    "dense": {
+      "questions": [
+        {
+          "id": "encoder-layers",
+          "type": "lexical",
+          "rank": 1,
+          "top": [
+            3,
+            5,
+            2
+          ]
+        },
+        {
+          "id": "why-scale",
+          "type": "paraphrase",
+          "rank": 3,
+          "top": [
+            4,
+            9,
+            4
+          ]
+        },
+        {
+          "id": "num-heads",
+          "type": "lexical",
+          "rank": 3,
+          "top": [
+            4,
+            9,
+            4
+          ]
+        },
+        {
+          "id": "ffn-size",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            5,
+            7,
+            6
+          ]
+        },
+        {
+          "id": "decoder-mask",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            5,
+            2,
+            6
+          ]
+        },
+        {
+          "id": "posenc-kind",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            6,
+            5,
+            2
+          ]
+        },
+        {
+          "id": "posenc-why",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            6,
+            9,
+            8
+          ]
+        },
+        {
+          "id": "optimizer",
+          "type": "lexical",
+          "rank": 1,
+          "top": [
+            7,
+            8,
+            8
+          ]
+        },
+        {
+          "id": "warmup",
+          "type": "lexical",
+          "rank": 1,
+          "top": [
+            7,
+            7,
+            8
+          ]
+        },
+        {
+          "id": "hardware",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            7,
+            8,
+            8
+          ]
+        },
+        {
+          "id": "base-train-time",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            7,
+            8,
+            7
+          ]
+        },
+        {
+          "id": "big-train-steps",
+          "type": "lexical",
+          "rank": 1,
+          "top": [
+            7,
+            7,
+            8
+          ]
+        },
+        {
+          "id": "ende-data",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "id": "enfr-vocab",
+          "type": "lexical",
+          "rank": 1,
+          "top": [
+            7,
+            12,
+            9
+          ]
+        },
+        {
+          "id": "batch-tokens",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            7,
+            8,
+            7
+          ]
+        },
+        {
+          "id": "label-smoothing",
+          "type": "lexical",
+          "rank": 1,
+          "top": [
+            8,
+            12,
+            9
+          ]
+        },
+        {
+          "id": "dropout",
+          "type": "lexical",
+          "rank": 1,
+          "top": [
+            8,
+            8,
+            8
+          ]
+        },
+        {
+          "id": "bleu-ende",
+          "type": "lexical",
+          "rank": 1,
+          "top": [
+            8,
+            8,
+            9
+          ]
+        },
+        {
+          "id": "bleu-enfr",
+          "type": "lexical",
+          "rank": 1,
+          "top": [
+            8,
+            8,
+            7
+          ]
+        },
+        {
+          "id": "beam",
+          "type": "paraphrase",
+          "rank": null,
+          "top": [
+            6,
+            9,
+            3
+          ]
+        },
+        {
+          "id": "checkpoints",
+          "type": "paraphrase",
+          "rank": null,
+          "top": [
+            8,
+            12,
+            3
+          ]
+        },
+        {
+          "id": "single-head",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            9,
+            4,
+            4
+          ]
+        },
+        {
+          "id": "key-size",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            9,
+            4,
+            4
+          ]
+        },
+        {
+          "id": "parsing-vs-berkeley",
+          "type": "lexical",
+          "rank": 3,
+          "top": [
+            9,
+            10,
+            10
+          ]
+        },
+        {
+          "id": "parsing-model",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            9,
+            12,
+            10
+          ]
+        },
+        {
+          "id": "complexity",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            6,
+            7,
+            2
+          ]
+        },
+        {
+          "id": "path-length",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            6,
+            7,
+            5
+          ]
+        },
+        {
+          "id": "rnn-parallel",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            2,
+            11,
+            6
+          ]
+        },
+        {
+          "id": "three-uses",
+          "type": "lexical",
+          "rank": 1,
+          "top": [
+            5,
+            4,
+            4
+          ]
+        },
+        {
+          "id": "tied-embeddings",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            5,
+            3,
+            5
+          ]
+        },
+        {
+          "id": "head-behaviour",
+          "type": "paraphrase",
+          "rank": 4,
+          "top": [
+            4,
+            5,
+            4
+          ]
+        },
+        {
+          "id": "future-work",
+          "type": "paraphrase",
+          "rank": null,
+          "top": [
+            11,
+            1,
+            12
+          ]
+        },
+        {
+          "id": "conv-cost",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            7,
+            6,
+            5
+          ]
+        },
+        {
+          "id": "who-scaled",
+          "type": "lexical",
+          "rank": null,
+          "top": [
+            4,
+            4,
+            4
+          ]
+        }
+      ],
+      "latency_ms": {
+        "median": 33.53005007375032,
+        "max": 428.45759983174503
+      },
+      "metrics": {
+        "hit@1": 0.7647058823529411,
+        "hit@3": 0.8529411764705882,
+        "hit@5": 0.8823529411764706,
+        "hit@8": 0.8823529411764706,
+        "mrr@8": 0.8014705882352942
+      },
+      "by_type": {
+        "paraphrase": {
+          "hit@1": 0.7619047619047619,
+          "hit@3": 0.8095238095238095,
+          "hit@5": 0.8571428571428571,
+          "hit@8": 0.8571428571428571,
+          "mrr@8": 0.7896825396825397
+        },
+        "lexical": {
+          "hit@1": 0.7692307692307693,
+          "hit@3": 0.9230769230769231,
+          "hit@5": 0.9230769230769231,
+          "hit@8": 0.9230769230769231,
+          "mrr@8": 0.8205128205128205
+        }
+      }
+    },
+    "bm25": {
+      "questions": [
+        {
+          "id": "encoder-layers",
+          "type": "lexical",
+          "rank": 3,
+          "top": [
+            12,
+            6,
+            3
+          ]
+        },
+        {
+          "id": "why-scale",
+          "type": "paraphrase",
+          "rank": 2,
+          "top": [
+            7,
+            4,
+            4
+          ]
+        },
+        {
+          "id": "num-heads",
+          "type": "lexical",
+          "rank": 6,
+          "top": [
+            9,
+            14,
+            12
+          ]
+        },
+        {
+          "id": "ffn-size",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            5,
+            7,
+            6
+          ]
+        },
+        {
+          "id": "decoder-mask",
+          "type": "paraphrase",
+          "rank": 8,
+          "top": [
+            5,
+            10,
+            9
+          ]
+        },
+        {
+          "id": "posenc-kind",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            6,
+            7,
+            3
+          ]
+        },
+        {
+          "id": "posenc-why",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            6,
+            9,
+            9
+          ]
+        },
+        {
+          "id": "optimizer",
+          "type": "lexical",
+          "rank": 2,
+          "top": [
+            4,
+            7,
+            8
+          ]
+        },
+        {
+          "id": "warmup",
+          "type": "lexical",
+          "rank": 1,
+          "top": [
+            7,
+            7,
+            8
+          ]
+        },
+        {
+          "id": "hardware",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            8,
+            7,
+            1
+          ]
+        },
+        {
+          "id": "base-train-time",
+          "type": "paraphrase",
+          "rank": 4,
+          "top": [
+            1,
+            7,
+            9
+          ]
+        },
+        {
+          "id": "big-train-steps",
+          "type": "lexical",
+          "rank": 2,
+          "top": [
+            9,
+            7,
+            8
+          ]
+        },
+        {
+          "id": "ende-data",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            7,
+            10,
+            1
+          ]
+        },
+        {
+          "id": "enfr-vocab",
+          "type": "lexical",
+          "rank": 1,
+          "top": [
+            7,
+            9,
+            8
+          ]
+        },
+        {
+          "id": "batch-tokens",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            7,
+            6,
+            9
+          ]
+        },
+        {
+          "id": "label-smoothing",
+          "type": "lexical",
+          "rank": 1,
+          "top": [
+            8,
+            4,
+            4
+          ]
+        },
+        {
+          "id": "dropout",
+          "type": "lexical",
+          "rank": 1,
+          "top": [
+            8,
+            9,
+            8
+          ]
+        },
+        {
+          "id": "bleu-ende",
+          "type": "lexical",
+          "rank": 1,
+          "top": [
+            8,
+            1,
+            8
+          ]
+        },
+        {
+          "id": "bleu-enfr",
+          "type": "lexical",
+          "rank": 1,
+          "top": [
+            8,
+            8,
+            1
+          ]
+        },
+        {
+          "id": "beam",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            8,
+            9,
+            1
+          ]
+        },
+        {
+          "id": "checkpoints",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            8,
+            8,
+            4
+          ]
+        },
+        {
+          "id": "single-head",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            9,
+            3,
+            4
+          ]
+        },
+        {
+          "id": "key-size",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            9,
+            4,
+            8
+          ]
+        },
+        {
+          "id": "parsing-vs-berkeley",
+          "type": "lexical",
+          "rank": 1,
+          "top": [
+            10,
+            9,
+            10
+          ]
+        },
+        {
+          "id": "parsing-model",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            9,
+            1,
+            8
+          ]
+        },
+        {
+          "id": "complexity",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            6,
+            5,
+            9
+          ]
+        },
+        {
+          "id": "path-length",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            6,
+            5,
+            2
+          ]
+        },
+        {
+          "id": "rnn-parallel",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            2,
+            2,
+            6
+          ]
+        },
+        {
+          "id": "three-uses",
+          "type": "lexical",
+          "rank": 1,
+          "top": [
+            5,
+            10,
+            2
+          ]
+        },
+        {
+          "id": "tied-embeddings",
+          "type": "paraphrase",
+          "rank": 2,
+          "top": [
+            4,
+            5,
+            5
+          ]
+        },
+        {
+          "id": "head-behaviour",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            7,
+            1,
+            14
+          ]
+        },
+        {
+          "id": "future-work",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            10,
+            6,
+            2
+          ]
+        },
+        {
+          "id": "conv-cost",
+          "type": "paraphrase",
+          "rank": 3,
+          "top": [
+            6,
+            2,
+            7
+          ]
+        },
+        {
+          "id": "who-scaled",
+          "type": "lexical",
+          "rank": 2,
+          "top": [
+            4,
+            1,
+            4
+          ]
+        }
+      ],
+      "latency_ms": {
+        "median": 21.008250070735812,
+        "max": 263.2499998435378
+      },
+      "metrics": {
+        "hit@1": 0.7058823529411765,
+        "hit@3": 0.9117647058823529,
+        "hit@5": 0.9411764705882353,
+        "hit@8": 1.0,
+        "mrr@8": 0.8149509803921569
+      },
+      "by_type": {
+        "paraphrase": {
+          "hit@1": 0.7619047619047619,
+          "hit@3": 0.9047619047619048,
+          "hit@5": 0.9523809523809523,
+          "hit@8": 1.0,
+          "mrr@8": 0.8432539682539681
+        },
+        "lexical": {
+          "hit@1": 0.6153846153846154,
+          "hit@3": 0.9230769230769231,
+          "hit@5": 0.9230769230769231,
+          "hit@8": 1.0,
+          "mrr@8": 0.7692307692307693
+        }
+      }
+    },
+    "hybrid": {
+      "questions": [
+        {
+          "id": "encoder-layers",
+          "type": "lexical",
+          "rank": 1,
+          "top": [
+            3,
+            12,
+            5
+          ]
+        },
+        {
+          "id": "why-scale",
+          "type": "paraphrase",
+          "rank": 2,
+          "top": [
+            4,
+            4,
+            7
+          ]
+        },
+        {
+          "id": "num-heads",
+          "type": "lexical",
+          "rank": 4,
+          "top": [
+            9,
+            4,
+            14
+          ]
+        },
+        {
+          "id": "ffn-size",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            5,
+            7,
+            6
+          ]
+        },
+        {
+          "id": "decoder-mask",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            5,
+            5,
+            6
+          ]
+        },
+        {
+          "id": "posenc-kind",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            6,
+            5,
+            7
+          ]
+        },
+        {
+          "id": "posenc-why",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            6,
+            9,
+            8
+          ]
+        },
+        {
+          "id": "optimizer",
+          "type": "lexical",
+          "rank": 1,
+          "top": [
+            7,
+            8,
+            4
+          ]
+        },
+        {
+          "id": "warmup",
+          "type": "lexical",
+          "rank": 1,
+          "top": [
+            7,
+            7,
+            8
+          ]
+        },
+        {
+          "id": "hardware",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            7,
+            8,
+            8
+          ]
+        },
+        {
+          "id": "base-train-time",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            7,
+            1,
+            8
+          ]
+        },
+        {
+          "id": "big-train-steps",
+          "type": "lexical",
+          "rank": 1,
+          "top": [
+            7,
+            9,
+            8
+          ]
+        },
+        {
+          "id": "ende-data",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "id": "enfr-vocab",
+          "type": "lexical",
+          "rank": 1,
+          "top": [
+            7,
+            9,
+            12
+          ]
+        },
+        {
+          "id": "batch-tokens",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            7,
+            8,
+            6
+          ]
+        },
+        {
+          "id": "label-smoothing",
+          "type": "lexical",
+          "rank": 1,
+          "top": [
+            8,
+            4,
+            8
+          ]
+        },
+        {
+          "id": "dropout",
+          "type": "lexical",
+          "rank": 1,
+          "top": [
+            8,
+            8,
+            8
+          ]
+        },
+        {
+          "id": "bleu-ende",
+          "type": "lexical",
+          "rank": 1,
+          "top": [
+            8,
+            8,
+            1
+          ]
+        },
+        {
+          "id": "bleu-enfr",
+          "type": "lexical",
+          "rank": 1,
+          "top": [
+            8,
+            8,
+            1
+          ]
+        },
+        {
+          "id": "beam",
+          "type": "paraphrase",
+          "rank": 3,
+          "top": [
+            9,
+            6,
+            8
+          ]
+        },
+        {
+          "id": "checkpoints",
+          "type": "paraphrase",
+          "rank": 2,
+          "top": [
+            8,
+            8,
+            3
+          ]
+        },
+        {
+          "id": "single-head",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            9,
+            3,
+            4
+          ]
+        },
+        {
+          "id": "key-size",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            9,
+            4,
+            4
+          ]
+        },
+        {
+          "id": "parsing-vs-berkeley",
+          "type": "lexical",
+          "rank": 2,
+          "top": [
+            9,
+            10,
+            10
+          ]
+        },
+        {
+          "id": "parsing-model",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            9,
+            1,
+            12
+          ]
+        },
+        {
+          "id": "complexity",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            6,
+            5,
+            7
+          ]
+        },
+        {
+          "id": "path-length",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            6,
+            7,
+            5
+          ]
+        },
+        {
+          "id": "rnn-parallel",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            2,
+            6,
+            11
+          ]
+        },
+        {
+          "id": "three-uses",
+          "type": "lexical",
+          "rank": 1,
+          "top": [
+            5,
+            10,
+            2
+          ]
+        },
+        {
+          "id": "tied-embeddings",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            5,
+            4,
+            3
+          ]
+        },
+        {
+          "id": "head-behaviour",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            7,
+            4,
+            4
+          ]
+        },
+        {
+          "id": "future-work",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            10,
+            11,
+            1
+          ]
+        },
+        {
+          "id": "conv-cost",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            7,
+            6,
+            6
+          ]
+        },
+        {
+          "id": "who-scaled",
+          "type": "lexical",
+          "rank": 4,
+          "top": [
+            4,
+            4,
+            4
+          ]
+        }
+      ],
+      "latency_ms": {
+        "median": 38.28370000701398,
+        "max": 47.02109983190894
+      },
+      "metrics": {
+        "hit@1": 0.8235294117647058,
+        "hit@3": 0.9411764705882353,
+        "hit@5": 1.0,
+        "hit@8": 1.0,
+        "mrr@8": 0.892156862745098
+      },
+      "by_type": {
+        "paraphrase": {
+          "hit@1": 0.8571428571428571,
+          "hit@3": 1.0,
+          "hit@5": 1.0,
+          "hit@8": 1.0,
+          "mrr@8": 0.9206349206349206
+        },
+        "lexical": {
+          "hit@1": 0.7692307692307693,
+          "hit@3": 0.8461538461538461,
+          "hit@5": 1.0,
+          "hit@8": 1.0,
+          "mrr@8": 0.8461538461538461
+        }
+      }
+    },
+    "hybrid+rerank": {
+      "questions": [
+        {
+          "id": "encoder-layers",
+          "type": "lexical",
+          "rank": 1,
+          "top": [
+            3,
+            5,
+            5
+          ]
+        },
+        {
+          "id": "why-scale",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            4,
+            4,
+            9
+          ]
+        },
+        {
+          "id": "num-heads",
+          "type": "lexical",
+          "rank": 3,
+          "top": [
+            9,
+            4,
+            4
+          ]
+        },
+        {
+          "id": "ffn-size",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            5,
+            3,
+            7
+          ]
+        },
+        {
+          "id": "decoder-mask",
+          "type": "paraphrase",
+          "rank": 4,
+          "top": [
+            6,
+            5,
+            6
+          ]
+        },
+        {
+          "id": "posenc-kind",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            6,
+            3,
+            5
+          ]
+        },
+        {
+          "id": "posenc-why",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            6,
+            9,
+            5
+          ]
+        },
+        {
+          "id": "optimizer",
+          "type": "lexical",
+          "rank": 1,
+          "top": [
+            7,
+            8,
+            7
+          ]
+        },
+        {
+          "id": "warmup",
+          "type": "lexical",
+          "rank": 1,
+          "top": [
+            7,
+            7,
+            7
+          ]
+        },
+        {
+          "id": "hardware",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            7,
+            8,
+            2
+          ]
+        },
+        {
+          "id": "base-train-time",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            7,
+            8,
+            8
+          ]
+        },
+        {
+          "id": "big-train-steps",
+          "type": "lexical",
+          "rank": 1,
+          "top": [
+            7,
+            8,
+            7
+          ]
+        },
+        {
+          "id": "ende-data",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            7,
+            8,
+            9
+          ]
+        },
+        {
+          "id": "enfr-vocab",
+          "type": "lexical",
+          "rank": 1,
+          "top": [
+            7,
+            9,
+            8
+          ]
+        },
+        {
+          "id": "batch-tokens",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            7,
+            9,
+            7
+          ]
+        },
+        {
+          "id": "label-smoothing",
+          "type": "lexical",
+          "rank": 1,
+          "top": [
+            8,
+            8,
+            9
+          ]
+        },
+        {
+          "id": "dropout",
+          "type": "lexical",
+          "rank": 1,
+          "top": [
+            8,
+            9,
+            7
+          ]
+        },
+        {
+          "id": "bleu-ende",
+          "type": "lexical",
+          "rank": 1,
+          "top": [
+            8,
+            8,
+            8
+          ]
+        },
+        {
+          "id": "bleu-enfr",
+          "type": "lexical",
+          "rank": 2,
+          "top": [
+            8,
+            8,
+            1
+          ]
+        },
+        {
+          "id": "beam",
+          "type": "paraphrase",
+          "rank": 6,
+          "top": [
+            1,
+            9,
+            2
+          ]
+        },
+        {
+          "id": "checkpoints",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            8,
+            8,
+            4
+          ]
+        },
+        {
+          "id": "single-head",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            9,
+            4,
+            4
+          ]
+        },
+        {
+          "id": "key-size",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            9,
+            4,
+            2
+          ]
+        },
+        {
+          "id": "parsing-vs-berkeley",
+          "type": "lexical",
+          "rank": 1,
+          "top": [
+            10,
+            9,
+            10
+          ]
+        },
+        {
+          "id": "parsing-model",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            9,
+            1,
+            12
+          ]
+        },
+        {
+          "id": "complexity",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            6,
+            7,
+            5
+          ]
+        },
+        {
+          "id": "path-length",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            6,
+            3,
+            2
+          ]
+        },
+        {
+          "id": "rnn-parallel",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            2,
+            2,
+            1
+          ]
+        },
+        {
+          "id": "three-uses",
+          "type": "lexical",
+          "rank": 1,
+          "top": [
+            5,
+            4,
+            4
+          ]
+        },
+        {
+          "id": "tied-embeddings",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            5,
+            3,
+            5
+          ]
+        },
+        {
+          "id": "head-behaviour",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            14,
+            12,
+            9
+          ]
+        },
+        {
+          "id": "future-work",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            10,
+            1,
+            2
+          ]
+        },
+        {
+          "id": "conv-cost",
+          "type": "paraphrase",
+          "rank": 1,
+          "top": [
+            7,
+            6,
+            10
+          ]
+        },
+        {
+          "id": "who-scaled",
+          "type": "lexical",
+          "rank": 2,
+          "top": [
+            4,
+            1,
+            4
+          ]
+        }
+      ],
+      "latency_ms": {
+        "median": 1751.8610000843182,
+        "max": 2058.974500047043
+      },
+      "metrics": {
+        "hit@1": 0.8529411764705882,
+        "hit@3": 0.9411764705882353,
+        "hit@5": 0.9705882352941176,
+        "hit@8": 1.0,
+        "mrr@8": 0.9044117647058824
+      },
+      "by_type": {
+        "paraphrase": {
+          "hit@1": 0.9047619047619048,
+          "hit@3": 0.9047619047619048,
+          "hit@5": 0.9523809523809523,
+          "hit@8": 1.0,
+          "mrr@8": 0.9246031746031746
+        },
+        "lexical": {
+          "hit@1": 0.7692307692307693,
+          "hit@3": 1.0,
+          "hit@5": 1.0,
+          "hit@8": 1.0,
+          "mrr@8": 0.8717948717948718
+        }
+      }
+    }
+  }
+}

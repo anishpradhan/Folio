@@ -1,0 +1,18 @@
+# Folio AI backend (Python 3.11–3.13). Install torch from the CPU index first on machines without a GPU:
+#   pip install --index-url https://download.pytorch.org/whl/cpu torch torchvision
+#   pip install -r requirements.txt
+docling>=2.150,<3            # PDF layout/structure extraction (pulls docling-core, pypdfium2, torch)
+fastapi>=0.115
+uvicorn[standard]>=0.32
+python-multipart>=0.0.17
+pydantic-settings>=2.6
+sqlalchemy>=2.0.36,<3
+psycopg[binary]>=3.2,<4     # PostgreSQL driver
+alembic>=1.14                # schema migrations, applied on start-up
+qdrant-client[fastembed]>=1.12,<2   # embedded/server Qdrant + local ONNX embeddings and BM25
+openai>=1.55                 # optional: text-embedding-3-small embeddings
+anthropic>=2.9,<3            # answers: Claude (streaming, citations, server-side fallbacks)
+google-genai>=3.5,<4         # answers: Gemini (LLM_PROVIDER=gemini; has a free tier)
+tiktoken>=0.8
+pytest>=8.3
+httpx>=0.28                  # FastAPI test client and the retrieval eval runner

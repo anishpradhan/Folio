@@ -1,0 +1,12 @@
+# Only requirements.lock.txt and folio_ai/ go into the image.
+.venv
+data
+.env
+.env.*
+.pytest_cache
+**/__pycache__
+*.pyc
+.install.log
+tests
+eval
+docker-compose.yml
